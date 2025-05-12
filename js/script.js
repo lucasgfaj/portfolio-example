@@ -1,16 +1,5 @@
-// Alterna entre tema claro e escuro
-function trocarTema() {
+document.getElementById("temaToggle").addEventListener("click", () => {
   document.body.classList.toggle("dark");
-}
-
-// Mensagem de boas-vindas ao carregar a página
-window.onload = function () {
-  alert("Bem-vindo ao seu portfólio!");
-  console.log("Página carregada com sucesso.");
-};
-
-// Exemplo extra: log de clique no botão (para aprendizado)
-const botaoTema = document.querySelector("button");
-botaoTema.addEventListener("click", () => {
-  console.log("Tema trocado!");
+  const isDark = document.body.classList.contains("dark");
+  document.getElementById("temaToggle").textContent = isDark ? "☀️" : "🌙";
 });
